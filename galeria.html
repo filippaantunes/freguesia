@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="lisboa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container-botoes">
+            <button id="botaosardinha" onclick="botaosardinha()"></button>
+            
+            <h1>São João – Antiga Freguesia de Lisboa</h1>
+            
+        </div>
+    </header>
+    <main>
+        <div class="carrossel">
+            <div id="slides" class="slides">
+                <img src="fotos/img3.jpg" title="convento.">
+                <img src="fotos/img4.jpg" title="Forte de Santa Apolônia.">
+                <img src="fotos/img5.jpg" title="museu do Azulejo.">
+                <img src="fotos/img6.jpg" title="cemitério Alto S. João.">
+                <img src="fotos/img7.jpg" title="igreja.">
+                <img src="fotos/img8.jpg" title="Palácio Niza.">
+        </div>
+                <div class="botoes">
+                    <button onclick="muda(-1)"><</button>
+                    <button onclick="muda(1)">></button>
+                </div>
+
+             </div> 
+              <!-- Insere o campo legenda no html -->
+              <p class="legenda" id="legenda"></p>
+        <h3>Património</h3>
+        <table class="tabela-segunda">
+            <tr>
+                <td class="negrito coluna-larga"><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/convento-de-santos-o-novo" target="_blank">Convento de Santos-o-Novo.</a></td>
+                <td>Construído no início do séc. XVII, durante o reinado de Filipe II, para as Comendadeiras da Ordem de Santiago, foi parcialmente destruído pelo terramoto de 1755, sendo depois recuperado. Após a extinção das ordens religiosas (1834), as Comendadeiras mantiveram-se no local até à Implantação da República (1910), data em que o 2º piso foi ocupado pela Escola Primária Superior de D. António da Costa, sendo posteriormente ocupada pelo Instituto Sidónio Pais. Atualmente pertence aos Recolhimentos. Trata-se de um edifício de grande imponência, que não chegou a ser concluído. O claustro,um dos maiores da Península Ibérica, de planta quadrada, desenvolve-se em galerias de arcos de volta perfeita, albergando as Capelas do Sr. dos Passos e da Encarnação, revestidas a talha, estatuária e azulejaria. A Igreja, de nave única, com 5 capelas laterais, integra talha dourada, mármores polícromos e painéis de azulejos, destacando-se os que revestem as paredes e narram os passos da vida dos Santos Mártires. A sua classificação como Imóvel de Interesse Público abrange a igreja, o claustro e demais dependências, assim como as zonas exteriores ajardinadas, formando o conjunto da cerca conventual.</td>
+            </tr>
+            <tr>
+                <td class="negrito coluna-larga"><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/forte-ou-baluarte-de-santa-apolonia" target="_blank">Forte de Santa Apolónia.</a></td>
+                <td>Mandado edificar no séc. XVII, entre 1652 e 1668, insere-se numa linha de defesa da orla ribeirinha, com início na foz da ribeira de Alcântara e término na Cruz da Pedra. O Forte da Santa Apolónia ficava situado na Quinta do Manique e tinha como função a defesa da parte oriental da cidade.
+
+Classificada como Imóvel de Interesse Público, esta estrutura defensiva, de forma pentagonal, tinha as frentes de fogo voltadas para Este e Oeste, flancos bem marcados e ligados pelo muro de gola. Da planta primitiva subsistem, ainda, a muralha da face direita de alvenaria com cunhais de cantaria de calcário, bem como as bases de 2 guaritas e 2 portões seicentistas, mandados construir pelo Visconde de Manique, dando o esquerdo acesso ao mirante. A coroar os muros surgem guardas exteriores de alvenaria, canhoneiras e alegretes intervalados com assentos de pedra.</td>
+            </tr>
+            <tr>
+                <td class="negrito coluna-larga"><a href="https://pt.wikipedia.org/wiki/Museu_Nacional_do_Azulejo" target="_blank">Museu Nacional do Azulejo.</a></td>
+                <td>Instalado no Convento da Madre de Deus, fundado em 1509 pela rainha D. Leonor, é um dos museus mais importantes do país, dedicado à arte do azulejo português.</td>
+            </tr>
+            <tr>
+                <td class="negrito coluna-larga"><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/cemiterio-alto-de-sao-joao" target="_blank">Cemitério do Alto de São João.</a></td>
+                <td>Em 1833, a crescente mortalidade da população lisboeta, causada por um surto epidémico de cólera, levou à criação do Cemitério do Alto de São João para suprir as necessidades da zona oriental da cidade, na altura situado “fora de portas”, zona rural de grandes quintas. Aqui podemos conhecer um pouco da nossa história desde o século XIX até aos nossos dias.</td>
+            </tr>
+            <tr>
+                <td class="negrito coluna-larga"><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/igreja-da-madre-de-deus" target="_blank">Igreja e Convento da Madre de Deus.</a></td>
+                <td>A Igreja faz parte de um edifício fundado em 1509 pela Rainha D. Leonor, o qual sofreu várias campanhas de obras. Na fachada destaque para o portal neomanuelino, de acesso lateral à igreja. O interior, de nave única, exemplo do barroco, é revestido a azulejos historiados do século XVIII provenientes da Holanda, da autoria de Willem van der Kloet e Jan van Oort; as séries de pinturas emolduradas com talha dourada são de Bento Coelho da Silveira. O teto de caixotões tem cenas da Vida da Virgem e foi executado, entre 1670 e 1690.</td>
+            </tr>
+            <tr>
+                <td class="negrito coluna-larga"><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/palacio-dos-marqueses-de-nisa" target="_blank">Palácio dos Marqueses de Niza</a></td>
+                <td>Edifício do século XVI, fundado em 1543 por D. Francisco da Câmara, segundo conde da Vidigueira. Mais tarde, esteve ligado aos descendentes de Vasco da Gama e, posteriormente, à família Niza. Sofreu danos no terramoto de 1755 e, em 1926, passou para a Misericórdia de Lisboa.</td>
+            </tr>
+
+        </table>
+        <div class="container-botoes">
+            <button id="botaovoltar" onclick="botaovoltar()"></button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Página dedicada á minha Junta de Freguesia. Criada por Vera Antunes</p>
+        <p>Página elaborada para UFCD_9952. Técnico de Multimédia</p>
+    </footer>
+    <script src="lisboa.js"></script>
+</body>
+</html>
