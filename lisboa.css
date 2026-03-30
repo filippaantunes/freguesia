@@ -15,11 +15,11 @@
 
 body {
     margin: 0;
-    /* O padding-top agora é dinâmico para evitar cortes no topo */
-    padding-top: clamp(140px, 20vh, 180px); 
+    padding-top: 160px; /* Ajusta este valor conforme a altura do teu header */
     text-align: center;
-    overflow-x: hidden;
-    background-color: #fff;
+    min-height: 100vh; /* Garante que o corpo ocupa a tela toda */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Fontes Responsivas */
@@ -64,12 +64,9 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Main e Conteúdo */
 main {
-    text-align: justify;
-    margin: 20px auto 120px auto;
-    padding: 0 20px;
-    max-width: 1200px;
+    flex: 1; /* Isto empurra o footer para o fundo se a página tiver pouco texto */
+    padding: 20px;
 }
 
 main iframe {
@@ -83,10 +80,11 @@ footer {
     background-color: #0000CD;
     color: white;
     text-align: center;
-    padding: 15px;
-    bottom: 0;
-    position: fixed;
-    z-index: 1000;
+    padding: 20px 10px;
+    /* MUDANÇA AQUI: Tira o fixed e coloca relative */
+    position: relative; 
+    clear: both;
+    margin-top: 40px; /* Cria um espaço simpático antes do fim */
 }
 
 /* Containers de Botões */
