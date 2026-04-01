@@ -1,6 +1,6 @@
 // Substitui pelo URL real do teu CV Interativo
 function botaosardinha() {
-  window.location.href = "https://teu-link-do-cv-aqui.com"; 
+  window.location.href = "https://filippaantunes.github.io/CV-Interativo/"; 
 }
 
 function botaohistória() { window.location.href = "historia.html"; }
