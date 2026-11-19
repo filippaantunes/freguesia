@@ -5,39 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Referências - São João</title>
     <link rel="stylesheet" href="lisboa.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Ajuste para o formulário ser amigável no telemóvel sem mudar o layout */
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left; /* Facilita a leitura no telemóvel */
-            padding: 10px;
-        }
-        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
-            width: 100%; /* Faz os campos ocuparem a largura disponível */
-            max-width: 100%;
-            box-sizing: border-box;
-            margin-top: 5px;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 15px;
-        }
-        ul {
-            text-align: left;
-            display: inline-block;
-            max-width: 90%;
-        }
+        form { max-width: 600px; margin: 0 auto; text-align: left; padding: 10px; }
+        form input:not([type="radio"]), select, textarea { width: 100%; box-sizing: border-box; margin-top: 5px; }
+        form > label { font-weight: bold; display: block; margin-top: 15px; }
+        .radio-group { margin-top: 5px; }
+        .radio-group label { margin-right: 12px; }
+        .btn-enviar { margin-top: 20px; background: #0000CD; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+        ul { text-align: left; display: inline-block; max-width: 90%; }
+        hr { margin: 40px 0; border: 0; border-top: 1px solid #ccc; }
     </style>
 </head>
 <body>
     <header>
         <div class="container-botoes">
-            <button id="botaosardinha" onclick="botaosardinha()"></button>
+            <button id="botaosardinha" type="button" onclick="botaosardinha()" aria-label="Início"></button>
             <h1>São João – Antiga Freguesia de Lisboa</h1>
         </div>
     </header>
@@ -45,69 +30,68 @@
     <main>
         <h2>Sobre o Projeto:</h2>
         <p>O meu nome é Vera Antunes e este projeto foi desenvolvido no âmbito do trabalho de UFCD_9952, Técnico de Multimédia, com o objetivo de criar um site sobre a minha cidade. No entanto, optei por focar a criação na minha freguesia, São João, a fim de explorar e partilhar a sua rica história e património com mais profundidade.</p>
-        
+
         <h3>Referências de informação:</h3>
         <ul>
-            <li><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Jo%C3%A3o_(Lisboa)" target="_blank">Informações de Wikipedia;</a></li>
-            <li><a href="https://www.freguesias.pt/freguesia.php?cod=110641" target="_blank">Informações de fregesias.pt;</a></li>
-            <li><a href="https://www.agendalx.pt/content/uploads/2023/02/Convento-de-Santos-o-Novo-visita-guiada-grupos-organizados.jpg" target="_blank">Informações serviços.lisboa.pt Convento de Santos-o-novo;</a></li>
-            <li><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/forte-ou-baluarte-de-santa-apolonia" target="_blank">Informações serviços.lisboa.pt Forte de Santa Apolónia;</a></li>
-            <li><a href="https://pt.wikipedia.org/wiki/Museu_Nacional_do_Azulejo" target="_blank">informações Wikipedia Museu Nacional do Azulejo;</a></li>
-            <li><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/cemiterio-alto-de-sao-joao" target="_blank">Informações serviços.lisboa.pt Cemitério do Alto de São João;</a></li>
-            <li><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/igreja-da-madre-de-deus" target="_blank">Informações serviços.lisboa.pt Igreja da Madre de Deus;</a></li>
-            <li><a href="https://informacoeseservicos.lisboa.pt/contactos/diretorio-da-cidade/palacio-dos-marqueses-de-nisa" target="_blank">Informações serviços.lisboa.pt Palácio dos Marqueses de Niza;</a></li>
-            <li><a href="https://www.heraldicacivica.pt/lsb-sjoao.html#gsc.tab=0" target="_blank">Informações sobre Brasão.</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Informações de Wikipédia;</a></li>
+            <li><a href="https://freguesias.pt" target="_blank" rel="noopener noreferrer">Informações de freguesias.pt;</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Informações Wikipédia – Convento de Santos-o-Novo;</a></li>
+            <li><a href="https://patrimoniocultural.gov.pt" target="_blank" rel="noopener noreferrer">Informações Património Cultural – Forte de Santa Apolónia;</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Informações Wikipédia – Museu Nacional do Azulejo;</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Informações Wikipédia – Cemitério do Alto de São João;</a></li>
+            <li><a href="https://patrimoniocultural.gov.pt" target="_blank" rel="noopener noreferrer">Informações Património Cultural – Igreja da Madre de Deus;</a></li>
+            <li><a href="https://blogspot.com" target="_blank" rel="noopener noreferrer">Informações Lisboa de Antigamente – Palácio dos Marqueses de Niza;</a></li>
+            <li><a href="https://heraldicacivica.com" target="_blank" rel="noopener noreferrer">Informações sobre Brasão (Heráldica Cívica).</a></li>
         </ul>
 
         <h3>Referências de imagens:</h3>
         <ul>
-            <li><a href="https://www.heraldicacivica.pt/images/armas/lsb-sjoao.gif" target="_blank">Brasão;</a></li>
-            <li><a href="https://www.heraldicacivica.pt/images/bandeiras/pt-lsbsa.gif" target="_blank">Bandeira, estandarte;</a></li>
-            <li><a href="https://www.agendalx.pt/content/uploads/2023/02/Convento-de-Santos-o-Novo-visita-guiada-grupos-organizados.jpg" target="_blank">Convento de Santos-o-novo;</a></li>
-            <li><a href="https://paixaoporlisboa.blogs.sapo.pt/o-forte-de-santa-apolonia-87616" target="_blank">Forte de Santa Apolónia</a></li>
-            <li><a href="https://www.lisbonportugaltourism.com/images/convento-da-madre-de-deus.jpg" target="_blank">Museu do Azulejo;</a></li>
-            <li><a href="https://media-cdn.tripadvisor.com/media/photo-s/06/a1/28/61/cemiterio-do-alto-de.jpg" target="_blank">Cemitério Alto S. João;</a></li>
-            <li><a href="https://media.timeout.com/images/103706558/750/422/image.jpg" target="_blank">Igreja/convento;</a></li>
-            <li><a href="https://lisboadeantigamente.blogspot.com/2017/06/paco-de-xabregas-palacio-niza-asilo-de.html" target="_blank">Palácio Niza;</a></li>
-            <li><a href="https://artsandculture.google.com/story/gAWhceMYFOAfIA?hl=pt-PT" target="_blank">Imagem de header painel de azulejos;</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Brasão;</a></li>
+            <li><a href="https://heraldicacivica.com" target="_blank" rel="noopener noreferrer">Bandeira, estandarte;</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Convento de Santos-o-Novo;</a></li>
+            <li><a href="https://sapo.pt" target="_blank" rel="noopener noreferrer">Forte de Santa Apolónia;</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Museu do Azulejo;</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Cemitério Alto S. João;</a></li>
+            <li><a href="https://wikipedia.org" target="_blank" rel="noopener noreferrer">Igreja/convento;</a></li>
+            <li><a href="https://blogspot.com" target="_blank" rel="noopener noreferrer">Palácio Niza;</a></li>
+            <li><a href="https://google.com" target="_blank" rel="noopener noreferrer">Imagem de header painel de azulejos;</a></li>
             <li>Imagem e imagens de Botões: Sardinha, História, Galeria, Referências, Voltar, criados por Vera Antunes, usando um modelo de linguagem IA.</li>
         </ul>
 
-        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
+        <hr>
 
         <h3>Caso queira deixar algum comentário ou incluir alguma informação, contacte:</h3>
         <form>
             <label for="nome">Nome</label>
-            <input id="nome" type="text" required maxlength="50">
+            <input id="nome" name="nome" type="text" required maxlength="50">
 
             <label for="email">E-mail</label>
-            <input id="email" type="email">
+            <input id="email" name="email" type="email">
 
-            <label for="telemovel">Telémovel</label>
-            <input id="telemovel" type="tel">
+            <label for="telemovel">Telemóvel</label>
+            <input id="telemovel" name="telemovel" type="tel">
 
             <label>Sexo</label>
-            <div style="margin-top: 5px;">
-                <input type="radio" name="sexo" value="Masculino"> Masculino
-                <input type="radio" name="sexo" value="Feminino"> Feminino
-                <input type="radio" name="sexo" value="Indeterminado"> Indeterminado
+            <div class="radio-group">
+                <label><input type="radio" name="sexo" value="Masculino"> Masculino</label>
+                <label><input type="radio" name="sexo" value="Feminino"> Feminino</label>
+                <label><input type="radio" name="sexo" value="Indeterminado"> Indeterminado</label>
             </div>
 
             <label for="pedido">Pedido de:</label>
             <select id="pedido" name="pedido">
                 <option value="Informação">Informações</option>
-                <option value="Deixar comentário">Deixar Comentário!</option> 
+                <option value="Deixar comentário">Deixar Comentário!</option>
             </select>
 
             <label for="mensagem">Sua Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="4"></textarea>
 
-            <br><br>
-            <input type="submit" value="Enviar" style="background-color: #0000CD; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
+            <button type="submit" class="btn-enviar">Enviar</button>
         </form>
 
         <div class="container-main">
-            <button id="botaovoltar" onclick="botaovoltar()"></button>
+            <button id="botaovoltar" type="button" onclick="botaovoltar()" aria-label="Voltar"></button>
         </div>
     </main>
 
@@ -119,3 +103,5 @@
     <script src="lisboa.js"></script>
 </body>
 </html>
+
+
